@@ -1,0 +1,8 @@
+.up {
+    height: 35px;
+    width: 35px;
+    position: fixed;
+    bottom: 65px;
+    right: 2rem;
+    font-size: 25px;
+}
