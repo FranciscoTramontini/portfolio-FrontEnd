@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Education } from '../models/education';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { Education } from '../models/education';
 
 export class EducationService {
 
-  private apiServerUrl = '';
+  private apiServerUrl = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { }
 
