@@ -1,0 +1,113 @@
+.mt-n1 {
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.mt-n2 {
+    margin-top: 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.mt-n3 {
+    margin-top: 4.5rem;
+}
+
+.verti-timeline {
+    border-left: 5px dashed #a5cfe8;
+    margin: 0 10px;
+}
+
+.verti-timeline .event-list {
+    position: relative;
+    padding: 40px 15px 40px;
+    border-top: 3px solid #a5cfe8;
+}
+
+.verti-timeline .event-list .event-date {
+    position: absolute;
+    right: -150px;
+    top: -3px;
+    padding: 55px;
+    color: #a5cfe8;
+    border-radius: 0 0 7px 7px;
+    text-align: center;
+}
+
+.verti-timeline .event-list .event-content {
+    position: relative;
+    border: 2px solid white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.verti-timeline .event-list .event-content::before {
+    content: "";
+    position: absolute;
+    height: 7.2rem;
+    width: 75%;
+    top: -7.2rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-left: 20px double #a5cfe8;
+    border-right: 20px double #a5cfe8;
+}
+
+.verti-timeline .event-list .timeline-icon {
+    position: absolute;
+    left: -14px;
+    top: -10px;
+}
+
+.verti-timeline .event-list .timeline-icon i {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    line-height: 25px;
+    font-size: 20px;
+    border-radius: 50%;
+    text-align: center;
+    color: #a5cfe8;
+}
+
+.verti-timeline .event-list:last-child {
+    padding-bottom: 2px;
+}
+
+.card {
+    border: none;
+    margin-bottom: 24px;
+    -webkit-box-shadow: 0 0 13px 0 white;
+    box-shadow: 0 0 13px 0 white;
+}
+
+.logo {
+    width: 100px;
+    margin-top: -2.7rem;
+    margin-right: 1.7rem;
+}
+
+.logo img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+}
+
+@media (min-width: 769px) {
+    .verti-timeline {
+        margin: 0 60px;
+    }
+
+    .verti-timeline .event-list {
+        padding: 40px 90px 60px 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .verti-timeline .event-list .event-date {
+        right: -10px;
+    }
+}
