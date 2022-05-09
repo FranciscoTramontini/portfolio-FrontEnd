@@ -1,0 +1,27 @@
+.imagen-nav {
+    background-image: url('https://aleduran.com/wp-content/uploads/lenguajes-programacion-top.gif');
+    background-repeat: no-repeat;
+    background-size: cover cover;
+    background-position: center center;
+    z-index: 0;
+    height: 500px;
+    font-size: calc(1rem, 4rem);
+}
+
+.mt-n1 {
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.mt-n2 {
+    margin-top: 4rem;
+    margin-left: 2.3rem;
+    margin-right: 4rem;
+    margin-bottom: -20rem;
+}
+
+.mt-n3 {
+    margin-top: 7.5rem;
+}
