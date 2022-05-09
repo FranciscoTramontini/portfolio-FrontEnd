@@ -16,6 +16,7 @@ import { ExperienceService } from './services/experience.service';
 import { PersonService } from './services/person.service';
 import { ProjectService } from './services/project.service';
 import { SkillService } from './services/skill.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SkillService } from './services/skill.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     EducationService,
