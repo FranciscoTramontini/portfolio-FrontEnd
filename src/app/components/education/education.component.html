@@ -55,7 +55,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addEducationModalLabel">Add Education</h5>
+                <h5 class="modal-title" id="addEducationModalLabel">Agregar Education</h5>
             </div>
             <div class="modal-body">
                 <form #addForm="ngForm" (ngSubmit)="onAddEducation(addForm)">
@@ -91,9 +91,9 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" id="add-education-form" class="btn btn-outline-primary"
-                            data-bs-dismiss="modal">Close</button>
+                            data-bs-dismiss="modal">Cerrar</button>
                         <button [disabled]="addForm.invalid" type="submit" class="btn btn-outline-info"
-                            data-bs-dismiss="modal">Save changes</button>
+                            data-bs-dismiss="modal">Guardar cambios</button>
                     </div>
                 </form>
             </div>
@@ -106,7 +106,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="editEducationModalLabel">Edit {{editEducation?.title}}</h5>
+                <h5 class="modal-title" id="editEducationModalLabel">Editar {{editEducation?.title}}</h5>
             </div>
             <div class="modal-body">
                 <form #editForm="ngForm">
@@ -144,9 +144,9 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" id="" data-bs-dismiss="modal"
-                            class="btn btn-outline-primary">Close</button>
+                            class="btn btn-outline-primary">Cerrar</button>
                         <button (click)="onEditEducation(editForm.value)" data-bs-dismiss="modal"
-                            class="btn btn-outline-info">Save changes</button>
+                            class="btn btn-outline-info">Guardar cambios</button>
                     </div>
                 </form>
             </div>
@@ -159,14 +159,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Delete Education</h5>
+                <h5 class="modal-title" id="deleteModalLabel">Eliminar Education</h5>
             </div>
             <div class="modal-body">
                 <p>Seguro que quiere eliminar {{deleteEducation?.title}}?</p>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">No</button>
                     <button (click)="onDeleteEducation(deleteEducation?.id!)" class="btn btn-outline-danger"
-                        data-bs-dismiss="modal">Yes</button>
+                        data-bs-dismiss="modal">Si</button>
                 </div>
             </div>
         </div>
