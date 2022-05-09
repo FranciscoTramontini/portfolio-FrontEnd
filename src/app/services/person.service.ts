@@ -13,11 +13,11 @@ export class PersonService {
 
   constructor(private http: HttpClient) { }
 
-  public getUsers(): Observable<Person[]> {
-    return this.http.get<Person[]>(`${this.apiServerUrl}/user/all`);
+  public getPersons(): Observable<Person[]> {
+    return this.http.get<Person[]>(`${this.apiServerUrl}/person/all`);
   }
 
-  public updateUser(user: Person): Observable<Person> {
-    return this.http.put<Person>(`${this.apiServerUrl}/user/update`, user);
+  public updatePerson(person: Person): Observable<Person> {
+    return this.http.put<Person>(`${this.apiServerUrl}/person/update`, person);
   }
 }
