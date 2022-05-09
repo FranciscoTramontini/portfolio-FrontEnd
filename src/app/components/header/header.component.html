@@ -1,1 +1,78 @@
-<p>header works!</p>
+<nav *ngFor="let person of persons" class="navbar navbar-expand-lg imagen-nav mt-n1 rounded-3">
+    <img id="header" src={{person?.imageUrl}} class="mt-n2 rounded-pill border border-5 border-info" alt="" width=300px
+        height=350px>
+</nav>
+
+<div *ngFor="let person of persons" class="raw border border-dark mt-n1 rounded-3" style="background-color: white;">
+    <div class="container">
+        <div class="row text-center justify-content-center justify-content-md-start mt-n3">
+            <h3 class=" font-monospace">
+                <strong>{{person?.name}} {{person?.lastName}}</strong>
+            </h3>
+            <h5 class="text-muted font-monospace fst-italic">{{person?.jobTitle}}</h5>
+            <p class="font-monospace">{{person?.country}}</p>
+        </div>
+        <button type="button" class="btn btn-outline-info border-0" (click)="onOpenModal(person, 'edit')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pen-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
+            </svg>
+        </button>
+        <div class="row text-center justify-content-center justify-content-md-start">
+            <h6 class="text-break blockquote lh-lg font-monospace lh-sm">{{person?.aboutMe}}</h6>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editUserModalLabel">Editar {{editPerson?.lastName}}</h5>
+            </div>
+            <div class="modal-body">
+                <form #editForm="ngForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" ngModel="{{editPerson?.name}}" name="name" class="form-control" id="name"
+                            placeholder="Name">
+                    </div>
+                    <input type="hidden" ngModel="{{editPerson?.id}}" name="id" class="form-control" id="id"
+                        placeholder="LastName">
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" ngModel="{{editPerson?.lastName}}" name="lastName" class="form-control"
+                            id="lastName" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="aboutMe">About Me</label>
+                        <input type="text" ngModel="{{editPerson?.aboutMe}}" name="aboutMe" class="form-control"
+                            id="aboutMe" placeholder="About Me">
+                    </div>
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title</label>
+                        <input type="text" ngModel="{{editPerson?.jobTitle}}" name="jobTitle" class="form-control"
+                            id="jobTitle" placeholder="Job Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" ngModel="{{editPerson?.country}}" name="country" class="form-control"
+                            id="country" placeholder="Country">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUrl">Image URL</label>
+                        <input type="text" ngModel="{{editPerson?.imageUrl}}" name="imageUrl" class="form-control"
+                            id="imageUrl" placeholder="Image URL">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="" data-bs-dismiss="modal"
+                            class="btn btn-outline-primary">Cerra</button>
+                        <button (click)="onEditUser(editForm.value)" data-bs-dismiss="modal"
+                            class="btn btn-outline-info">Guardar cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
