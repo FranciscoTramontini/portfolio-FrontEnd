@@ -8,7 +8,7 @@ import { Person } from '../models/person';
 })
 
 export class PersonService {
-  private apiServerUrl = '';
+  private apiServerUrl = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { }
 
