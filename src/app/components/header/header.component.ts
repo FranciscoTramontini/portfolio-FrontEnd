@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public onEditUser(person: Person): void {
-    this.userService.updateUser(person).subscribe({
+    this.userService.updatePerson(person).subscribe({
       next: (response: Person) => {
         console.log(response);
         this.getPersons();
