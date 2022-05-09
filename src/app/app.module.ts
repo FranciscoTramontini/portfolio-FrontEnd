@@ -18,6 +18,7 @@ import { ProjectService } from './services/project.service';
 import { SkillService } from './services/skill.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [
     EducationService,
