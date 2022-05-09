@@ -1,3 +1,12 @@
+.mt-n1 {
+    margin-top: 15em;
+    margin-left: 35em;
+}
+
+.mt-n2 {
+    margin-left: 2em;
+}
+
 .up {
     height: 35px;
     width: 35px;
@@ -9,11 +18,11 @@
 
 @keyframes spinner-grow {
     0% {
-      transform: scale(0);
+        transform: scale(0);
     }
-  
+
     50% {
-      opacity: 1;
-      transform: none;
+        opacity: 1;
+        transform: none;
     }
-  }
+}
