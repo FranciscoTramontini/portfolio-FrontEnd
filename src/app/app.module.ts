@@ -19,6 +19,9 @@ import { SkillService } from './services/skill.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { AuthenticationService } from './services/authentication.service';
+import { TokenService } from './services/token.service';
+import { interceptorProvider } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -44,8 +47,12 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     ExperienceService,
     PersonService,
     ProjectService,
-    SkillService
+    SkillService,
+    AuthenticationService,
+    TokenService,
+    interceptorProvider
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
