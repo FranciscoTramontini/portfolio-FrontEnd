@@ -6,3 +6,14 @@
     right: 2rem;
     font-size: 25px;
 }
+
+@keyframes spinner-grow {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      opacity: 1;
+      transform: none;
+    }
+  }
