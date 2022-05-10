@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:8080',
-  apiAuthUrl: 'http://localhost:8080/auth/'
+  apiBaseUrl: 'https://hidden-ocean-22855.herokuapp.com',
+  apiAuthUrl: 'https://hidden-ocean-22855.herokuapp.com/auth/'
 };
 
 /*
