@@ -12,14 +12,16 @@
 }
 
 .mt-n3 {
+    margin-top: 1rem;
     margin-right: 0.25rem;
-    margin-left: 0.5rem;
-    margin-bottom: 0.25rem;
+    margin-left: 0.25rem;
+    margin-bottom: 1rem;
 }
 
 .mt-n4 {
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-left: 0.25rem;
+}
+
+.mt-n5 {
+    margin-top: 1.5em;
 }
