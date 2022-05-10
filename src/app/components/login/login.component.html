@@ -27,7 +27,7 @@
                 <input type="password" name="password" id="password" [(ngModel)]="password" required>
             </div>
             <button class="btn btn-info mt-3" [disabled]="!f.valid">
-                <h3>LOG IN</h3>
+                <h2 class="font-monospace fst-italic">LOG IN</h2>
             </button>
         </form>
         <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger mt-3">
