@@ -1,65 +1,54 @@
-<div id="experience" class="raw border border-info mt-n1 rounded-3" style="background-color: white;">
+<div id="education" class="raw border border-info mt-n1 rounded-3" style="background-color: white;">
     <div class="container" id="main-container">
-        <section class="panel">
-            <header class="panel-heading">
-                <button *ngIf="isAdmin" type="button" class="btn btn-outline-info border-0 mt-n2"
-                    (click)="onOpenModal(null!, 'add')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                        class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
-                    </svg>
-                </button>
-            </header>
-            <tbody>
-                <div class="container mt-n2">
-                    <div class="row text-center justify-content-center justify-content-md-start">
-                        <div class="card-body">
-                            <div *ngFor="let experience of experiences" class="mt-n2">
-                                <ul class="verti-timeline list-unstyled" dir="ltr">
-                                    <li class="event-list">
-                                        <div class="timeline-icon">
-                                            <i class="mdi mdi-adjust bg-info"></i>
-                                        </div>
-                                        <div class="event-content p-4 mt-n3">
-                                            <h5 class="mt-0 mb-3 font-18">{{experience?.company}}</h5>
-                                            <div>
-                                                <p class="mb-2 text-muted">{{experience?.yearInc}} -
-                                                    {{experience?.yearGra}} ({{experience?.duration}})</p>
-                                                <p class="mb-0 fst-italic">{{experience?.aboutJob}}</p>
-                                                <br />
-                                                <p class="mb-2 text-muted">{{experience?.country}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="event-date">
-                                            <div class="logo"><img src={{experience?.imageUrl}} alt=""></div>
-                                        </div>
-                                        <button *ngIf="isAdmin" type="button"
-                                            class="btn btn-outline-info border-0 mt-n1"
-                                            (click)="onOpenModal(experience, 'edit')">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
-                                                <path
-                                                    d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
-                                            </svg>
-                                        </button>
-                                        <button *ngIf="isAdmin" type="button"
-                                            class="btn btn-outline-danger border-0 mt-n1"
-                                            (click)="onOpenModal(experience, 'delete')">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                fill="currentColor" class="bi bi-x-octagon-fill" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
-                                            </svg>
-                                        </button>
-                                    </li>
-                                </ul>
+        <button *ngIf="isAdmin" type="button" class="btn btn-outline-info border-0 mt-n2"
+            (click)="onOpenModal(null!, 'add')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+            </svg>
+        </button>
+        <div *ngFor="let experience of experiences" class="card mb-3 mt-n2">
+            <div class="card-body">
+                <div class="d-flex flex-column flex-lg-row text-center">
+                    <div class="me-4 mb-2 logo">
+                        <img src={{experience?.imageUrl}} alt="">
+                    </div>
+                    <div class="row flex-fill">
+                        <div class="col-sm-5">
+                            <div class="mt-n3">
+                                <h4 class="h5">{{experience?.company}}</h4>
+                                <p class="mb-2 text-muted">{{experience?.yearInc}} -
+                                    {{experience?.yearGra}} ({{experience?.duration}})</p>
                             </div>
+                        </div>
+                        <div class="col-sm-4 py-2">
+                            <h6 class="mb-0 fst-italic">{{experience?.aboutJob}}</h6>
+                            <br />
+                            <p class="mb-2 text-muted">{{experience?.country}}</p>
+                        </div>
+                        <div class="col-sm-3 text-lg-end">
+                            <button *ngIf="isAdmin" type="button" class="btn btn-outline-info border-0 mt-n1"
+                                (click)="onOpenModal(experience, 'edit')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-pen-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
+                                </svg>
+                            </button>
+                            <button *ngIf="isAdmin" type="button" class="btn btn-outline-danger border-0 mt-n1"
+                                (click)="onOpenModal(experience, 'delete')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-x-octagon-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </tbody>
-        </section>
+            </div>
+        </div>
     </div>
 </div>
 
