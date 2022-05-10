@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { SkillService } from 'src/app/services/skill.service';
+import { TokenService } from 'src/app/services/token.service';
 import { Skill } from '../../models/skill';
 
 @Component({
@@ -14,13 +15,25 @@ export class SkillComponent implements OnInit {
   public skills: Skill[] = [];
   public editSkill!: Skill;
   public deleteSkill!: Skill;
+  roles: string[] = [];
+  isAdmin = false;
 
-  constructor(private skillService: SkillService) { }
+  constructor(
+    private skillService: SkillService,
+    private tokenService: TokenService
+  ) { }
 
   ngOnInit(): void {
     this.getSkills();
+
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(role => {
+      if (role === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
-  
+
   public getSkills(): void {
     this.skillService.getSkills().subscribe({
       next: (response: Skill[]) => {
