@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ProjectService } from 'src/app/services/project.service';
+import { TokenService } from 'src/app/services/token.service';
 import { Project } from '../../models/project';
 
 @Component({
@@ -14,11 +15,23 @@ export class ProjectComponent implements OnInit {
   public projects: Project[] = [];
   public editProject!: Project;
   public deleteProject!: Project;
+  roles: string[] = [];
+  isAdmin = false;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(
+    private projectService: ProjectService,
+    private tokenService: TokenService
+    ) { }
 
   ngOnInit(): void {
     this.getProjects();
+
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(role => {
+      if (role === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
 
   public getProjects(): void {
