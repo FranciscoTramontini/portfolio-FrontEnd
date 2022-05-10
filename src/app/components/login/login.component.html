@@ -14,17 +14,21 @@
         <div class="spinner-grow text-info mt-n3" style="width: 2rem; height: 2rem;" role="status"></div>
     </div>
     <div class="wrapper fondo" *ngIf="isLoading">
-        <div class="logo"> <img src='https://i.ibb.co/bPG25hJ/perfil-login.png' alt=""> </div>
+        <div class="logo"> 
+            <img src='https://i.ibb.co/bPG25hJ/perfil-login.png' alt=""> 
+        </div>
         <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
             <div class="form-field d-flex align-items-center mt-n1">
-                <label for="nameUser">User</label>
+                <label for="nameUser">Usuario</label>
                 <input type="text" name="nameUser" id="nameUser" [(ngModel)]="nameUser" required>
             </div>
             <div class="form-field d-flex align-items-center">
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" [(ngModel)]="password" required>
             </div>
-            <button class="btn btn-info mt-3" [disabled]="!f.valid">LOG IN</button>
+            <button class="btn btn-info mt-3" [disabled]="!f.valid">
+                <h3>LOG IN</h3>
+            </button>
         </form>
         <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger mt-3">
             Fail LOGIN: {{errMsj}}
