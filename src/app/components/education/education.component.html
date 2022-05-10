@@ -12,9 +12,9 @@
                 </button>
             </header>
             <tbody>
-                <div class="d-flex flex-column text-center px-xl-6 mt-n3">
-                    <div class="p-2" *ngFor="let education of educations">
-                        <div class="card border-hover-primary hover-scale">
+                <div class="row text-center justify-content-center justify-content-md-start mt-n3">
+                    <div *ngFor="let education of educations">
+                        <div class="card border-hover-primary hover-scale mt-n3">
                             <div class="card-body">
                                 <div class="logo"><img src={{education?.imageUrl}} alt=""></div>
                                 <h6 class="text-muted">{{education?.yearInc}} - {{education?.yearGra}}</h6>
