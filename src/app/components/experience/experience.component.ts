@@ -12,6 +12,7 @@ import { TokenService } from 'src/app/services/token.service';
 })
 
 export class ExperienceComponent implements OnInit {
+
   public experiences: Experience[] = [];
   public editExperience!: Experience;
   public deleteExperience!: Experience;
@@ -104,5 +105,4 @@ export class ExperienceComponent implements OnInit {
     container?.appendChild(button);
     button.click();
   }
-
 }

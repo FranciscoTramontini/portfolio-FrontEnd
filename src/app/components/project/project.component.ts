@@ -12,6 +12,7 @@ import { Project } from '../../models/project';
 })
 
 export class ProjectComponent implements OnInit {
+
   public projects: Project[] = [];
   public editProject!: Project;
   public deleteProject!: Project;
@@ -21,7 +22,7 @@ export class ProjectComponent implements OnInit {
   constructor(
     private projectService: ProjectService,
     private tokenService: TokenService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.getProjects();

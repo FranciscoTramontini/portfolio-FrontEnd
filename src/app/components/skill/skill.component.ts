@@ -12,6 +12,7 @@ import { Skill } from '../../models/skill';
 })
 
 export class SkillComponent implements OnInit {
+
   public skills: Skill[] = [];
   public editSkill!: Skill;
   public deleteSkill!: Skill;

@@ -11,6 +11,7 @@ import { TokenService } from 'src/app/services/token.service';
 })
 
 export class LoginComponent implements OnInit {
+
   isLogged = false;
   isLoginFail = false;
   loginUser!: LoginUser;
@@ -24,9 +25,9 @@ export class LoginComponent implements OnInit {
     private tokenService: TokenService,
     private authService: AuthenticationService,
     private router: Router
-    ) { 
-      this.isLoading = false;
-    }
+  ) {
+    this.isLoading = false;
+  }
 
   ngOnInit(): void {
     if (this.tokenService.getToken()) {

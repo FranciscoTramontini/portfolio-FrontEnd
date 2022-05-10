@@ -12,7 +12,8 @@
             <h5 class="text-muted font-monospace fst-italic">{{person?.jobTitle}}</h5>
             <p class="font-monospace">{{person?.country}}</p>
         </div>
-        <button *ngIf="isAdmin" type="button" class="btn btn-outline-info border-0" (click)="onOpenModal(person, 'edit')">
+        <button *ngIf="isAdmin" type="button" class="btn btn-outline-info border-0"
+            (click)="onOpenModal(person, 'edit')">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pen-fill"
                 viewBox="0 0 16 16">
                 <path

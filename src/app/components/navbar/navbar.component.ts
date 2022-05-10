@@ -8,11 +8,12 @@ import { TokenService } from 'src/app/services/token.service';
 })
 
 export class NavbarComponent implements OnInit {
+
   isLogged = false;
 
   constructor(
     private tokenService: TokenService,
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     if (this.tokenService.getToken()) {
@@ -25,5 +26,4 @@ export class NavbarComponent implements OnInit {
   onLogOut(): void {
     this.tokenService.logOut();
   }
-
 }

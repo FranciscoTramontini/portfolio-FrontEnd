@@ -11,6 +11,7 @@ import { TokenService } from 'src/app/services/token.service';
 })
 
 export class HeaderComponent implements OnInit {
+
   public persons: Person[] = [];
   public editPerson!: Person;
   roles: string[] = [];
