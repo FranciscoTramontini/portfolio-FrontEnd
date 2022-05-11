@@ -17,3 +17,7 @@
   BackEnd con SpringBoot
   
   Database con MySQL 
+  
+  # Parte FrontEnd
+  
+  Este repositorio contiene Angular (TypeScripy, HTML, CSS) que utiliza el Portfolio.
