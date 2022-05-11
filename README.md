@@ -27,3 +27,5 @@
     Este repositorio contiene Angular (TypeScripy, HTML, CSS) que utiliza el Portfolio.
     
     Aca encontraras el maquetado web, y funciones para conectar el Back con el Front.
+    
+    Subimos a la web mediante Firebase.
