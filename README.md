@@ -1,6 +1,6 @@
 # Portfolio Web
 
-  https://tramontini-francisco-portfolio.web.app/
+  Si queres ver el Portfolio Web ingresa aca: https://tramontini-francisco-portfolio.web.app/
   
   Si te interesa ver como editarlo, comunicate conmigo por email: frantramontini97@gmail.com
 
@@ -10,14 +10,20 @@
   
   Carta de presentación para el mercado laboral.
 
-# Una APP con arquitectura distribuida.
+# Detalles de la App
 
-  FrontEnd con Angular
+  Una APP con arquitectura distribuida:
+
+    * FrontEnd con Angular
   
-  BackEnd con SpringBoot
+    * BackEnd con SpringBoot
   
-  Database con MySQL 
+    * Database con MySQL 
   
-  # Parte FrontEnd
+  # Contenido del repositorio
   
-  Este repositorio contiene Angular (TypeScripy, HTML, CSS) que utiliza el Portfolio.
+  ## Parte FrontEnd
+  
+    Este repositorio contiene Angular (TypeScripy, HTML, CSS) que utiliza el Portfolio.
+    
+    Aca encontraras el maquetado web, y funciones para conectar el Back con el Front.
