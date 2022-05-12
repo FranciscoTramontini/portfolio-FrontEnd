@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 export class SpinnerService {
 
   isLoading$ = new Subject<boolean>();
-  
+
   constructor() { }
 
   show(): void {

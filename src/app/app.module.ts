@@ -24,6 +24,7 @@ import { TokenService } from './services/token.service';
 import { interceptorProvider } from './services/interceptor.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SpinnerService } from './services/spinner.service';
+import { SpinnerInterceptorProvider } from './services/spinner-inter.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { SpinnerService } from './services/spinner.service';
     AuthenticationService,
     TokenService,
     SpinnerService,
-    interceptorProvider
+    interceptorProvider,
+    SpinnerInterceptorProvider
   ],
   bootstrap: [AppComponent]
 })
