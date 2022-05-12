@@ -5,14 +5,8 @@
 </div>
 
 <ng-template #loggedOut>
-    <div *ngIf="!isLoading">
-        <div class="spinner-grow text-info mt-n2" style="width: 2rem; height: 2rem;" role="status"></div>
-        <div class="spinner-grow text-info mt-n3" style="width: 2rem; height: 2rem;" role="status"></div>
-        <div class="spinner-grow text-info mt-n3" style="width: 2rem; height: 2rem;" role="status"></div>
-        <div class="spinner-grow text-info mt-n3" style="width: 2rem; height: 2rem;" role="status"></div>
-        <div class="spinner-grow text-info mt-n3" style="width: 2rem; height: 2rem;" role="status"></div>
-        <div class="spinner-grow text-info mt-n3" style="width: 2rem; height: 2rem;" role="status"></div>
-    </div>
+    <app-spinner></app-spinner>
+    
     <div class="wrapper fondo" *ngIf="isLoading">
         <div class="logo">
             <img src='https://i.ibb.co/bPG25hJ/perfil-login.png' alt="">
