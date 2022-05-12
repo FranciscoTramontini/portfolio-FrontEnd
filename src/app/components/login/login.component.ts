@@ -19,14 +19,12 @@ export class LoginComponent implements OnInit {
   password!: string;
   roles: string[] = [];
   errMsj!: string;
-  isLoading: boolean;
 
   constructor(
     private tokenService: TokenService,
     private authService: AuthenticationService,
     private router: Router
   ) {
-    this.isLoading = false;
   }
 
   ngOnInit(): void {
@@ -35,10 +33,6 @@ export class LoginComponent implements OnInit {
       this.isLoginFail = false;
       this.roles = this.tokenService.getAuthorities();
     }
-
-    setTimeout(() => {
-      this.isLoading = true;
-    }, 2000);
   }
 
   onLogin(): void {
