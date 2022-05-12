@@ -23,6 +23,7 @@ import { AuthenticationService } from './services/authentication.service';
 import { TokenService } from './services/token.service';
 import { interceptorProvider } from './services/interceptor.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SpinnerService } from './services/spinner.service';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     SkillService,
     AuthenticationService,
     TokenService,
+    SpinnerService,
     interceptorProvider
   ],
   bootstrap: [AppComponent]
