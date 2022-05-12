@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
-import { SpinnerService } from 'src/app/services/spinner.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-spinner',
   templateUrl: './spinner.component.html',
   styleUrls: ['./spinner.component.css']
 })
-export class SpinnerComponent {
 
-  isLoading$ = this.spinnerService.isLoading$;
+export class SpinnerComponent implements OnInit {
 
-  constructor(private spinnerService: SpinnerService) { }
+  public isLoading!: boolean;
+
+  constructor() {
+    this.isLoading = false
+  }
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.isLoading = true;
+    }, 5000);
+  }
+
 
 }
