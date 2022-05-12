@@ -1,3 +1,14 @@
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 100%, 0.781);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .lds-circle {
     display: inline-block;
     transform: translateZ(1px);
@@ -5,11 +16,11 @@
 
 .lds-circle>div {
     display: inline-block;
-    width: 64px;
-    height: 64px;
+    width: 10em;;
+    height: 10em;
     margin: 8px;
     border-radius: 50%;
-    background: #a5cfe8;
+    background: #1e1842;
     animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
