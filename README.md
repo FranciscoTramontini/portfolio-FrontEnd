@@ -1,6 +1,6 @@
 # Portfolio Web
 
-  Si queres ver el Portfolio Web ingresa aca: https://tramontini-francisco-portfolio.web.app/
+  Si querés ver el Portfolio Web ingresa aca: https://tramontini-francisco-portfolio.web.app/
   
   Si te interesa ver como editarlo, comunicate conmigo por email: frantramontini97@gmail.com
 
