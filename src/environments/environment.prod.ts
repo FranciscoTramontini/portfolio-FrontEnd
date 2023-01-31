@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'https://hidden-ocean-22855.herokuapp.com',
-  apiAuthUrl: 'https://hidden-ocean-22855.herokuapp.com/auth/'
+  apiBaseUrl: 'https://springboot-tramontini.onrender.com',
+  apiAuthUrl: 'https://springboot-tramontini.onrender.com/auth/'
 };
